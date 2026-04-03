@@ -2,7 +2,7 @@ import {LayoutDashboard, ShieldAlert} from "lucide-react";
 
 function Sidebar(){
     return(
-        <div className="w-64 h-screen bg-slate-900 text-white p-4"> 
+        <div className="w-64 h-screen bg-gradient-to-b from-green-950 to-green-700 text-white p-4">
         <div className="flex items-center gap-2 mb-6">
             <ShieldAlert /> 
             <h2 className="font-bold">SOC Panel</h2>       
