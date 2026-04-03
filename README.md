@@ -1,73 +1,114 @@
-# React + TypeScript + Vite
+# 🚀 SOC Dashboard - IP Blocklist App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project is a simple SOC (Security Operations Center) dashboard that allows users to manage and monitor IP blocklist entries.
 
-Currently, two official plugins are available:
+Users can add IP addresses, track when they were added, search through existing records, and remove entries. The application persists data locally using the browser's localStorage.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## ✨ Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+* ➕ Add IP address with date
+* 🔍 Search IP addresses (case-insensitive)
+* ❌ Delete IP entries
+* 🚫 Prevent duplicate IP entries
+* 💾 Data persistence using localStorage
+* ⚡ Real-time UI updates
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 🛠️ Technologies Used
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+* React (Vite)
+* TypeScript
+* TailwindCSS
+* React Hook Form
+* Zod (for validation)
+* shadcn/ui (UI components)
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+---
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## 🧠 Key Concepts Practiced
+
+* Component-based architecture
+* State management with `useState`
+* Side effects with `useEffect`
+* Memoization with `useMemo`
+* Form handling with `react-hook-form`
+* Schema validation with Zod
+* Separation of concerns (UI vs business logic)
+
+---
+
+## 📂 Project Structure
+
+```bash
+src/
+  components/
+    dashboard/
+      DashboardHeader.tsx
+      EventForm.tsx
+      EventTable.tsx
+      SearchBar.tsx
+      Sidebar.tsx
+    ui/
+      Button.tsx
+      Input.tsx
+      Card.tsx
+      Table.tsx
+  lib/
+    validators/
+      event-schema.ts
+    utils.ts
+  types/
+    event.ts
+  App.tsx
+  main.tsx
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+---
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## ⚙️ Installation
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+# Clone the repository
+git clone https://github.com/elifnurcakici/soc-dashboard.git
+
+# Navigate into the project
+cd soc-dashboard
+
+# Install dependencies
+npm install
+
+# Start the development server
+npm run dev
 ```
+
+---
+
+## 🔐 Validation Logic
+
+* IP address format is validated using Zod schema
+* Duplicate IP entries are prevented at the application level
+* Errors are displayed directly in the form UI
+
+---
+
+## 💡 Notes
+
+* Data is stored in localStorage, so it persists across page reloads
+* No backend is used in this project (frontend-focused implementation)
+
+---
+
+## 👩🏻‍💻 Author
+
+**Elif Çakıcı**
+
+* GitHub: https://github.com/elifnurcakici
+
+---
+
+## ⭐️ Show Your Support
+
+If you like this project, consider giving it a ⭐️ on GitHub!
