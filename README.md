@@ -101,6 +101,9 @@ npm run dev
 
 ---
 
+## 📸 Preview
+![App Screenshot](./public/screenshot.png)
+
 ## 👩🏻‍💻 Author
 
 **Elif Çakıcı**
