@@ -1,4 +1,4 @@
-# 🚀 SOC Dashboard - IP Blocklist App
+# 🚀 SOC Dashboard
 
 This project is a simple SOC (Security Operations Center) dashboard that allows users to manage and monitor IP blocklist entries.
 
