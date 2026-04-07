@@ -8,7 +8,7 @@ interface Props{
 
 function EventTable({data, onDelete }: Props){ 
     return(
-        <div className="bg-white p-4 rounded-xl shadow">
+        <div className="bg-gray-200 p-4 rounded-xl shadow">
             <table className="w-full"> 
                 <thead> 
                     <tr className="text-left">
@@ -26,11 +26,11 @@ function EventTable({data, onDelete }: Props){
                     </tr>
                     ) : (
                         data.map((item) => (
-                            <tr key={item.id} className="border-t">
+                            <tr key={item.id} className="transition duration-150 hover:bg-green-500/10">
                                 <td className="py-2">{item.ip}</td>
                                 <td className="py-2">{item.date}</td>
                                 <td className="py-2"> 
-                                <Button className="border border-gray-400 px-4 py-2 rounded"
+                                <Button  className="bg-red-500/10 text-red-400 hover:bg-red-500/20"
                                     variant="destructive" 
                                     size="sm"
                                     onClick={() => onDelete(item.id)}
